@@ -1,0 +1,31 @@
+# Use root/test as user/password credentails
+version: '2.2'
+
+services:
+  server: 
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: test
+    ports:
+     - 3307:3306
+    volumes:
+     - ./data:/var/lib/demo_data
+     - ./bin:/docker-entrypoint-initdb.d/
+    networks:
+      - mysql_transaction
+
+  #client_A:
+  #  image: mysql:5.7
+  #  environment:
+  #    MYSQL_ROOT_PASSWORD: test
+  #  ports:
+  #    - 3308:3306
+  #  networks:
+  #    - mysql_transaction
+
+networks:
+  mysql_transaction:  
+
+
+
