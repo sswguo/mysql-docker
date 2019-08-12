@@ -34,3 +34,4 @@ set session transaction isolation level serializable;
 
 - https://dev.mysql.com/doc/refman/5.7/en/innodb-transaction-isolation-levels.html
 - https://dev.mysql.com/doc/refman/5.7/en/set-transaction.html
+- https://www.cnblogs.com/shihaiming/p/11044740.html
